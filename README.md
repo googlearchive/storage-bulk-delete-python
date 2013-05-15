@@ -1,4 +1,4 @@
-## Cloud Storage Bulk Delete
+## Cloud Storage Bulk Delete Example
 
 This project is a small sample program written in python that showcases the
 ability to batch operations in the Google Cloud Storage JSON API.  By taking
@@ -16,11 +16,11 @@ following:
 1. As always, clone a copy of this repo to your workstation
 1. Install the dependencies from requirements.txt either via `pip` or
    `easy_install`
-1. Copy of `config-example.py` named config.py and edit it, substituting values
-   as explained in the comments
+1. Create a copy of `config-example.py` named config.py and edit it,
+   substituting values as explained in the comments
 1. Run it:
-   1. `gsutil ls gs://mybucket/delete-me* >myfiles.txt`
-   1. `python bulk-delete.py myfiles.txt`
+   a. `gsutil ls gs://mybucket/delete-me* >myfiles.txt`
+   a. `python bulk-delete.py myfiles.txt`
 
 ## Contributing changes
 
