@@ -19,8 +19,8 @@ following:
 1. Create a copy of `config-example.py` named config.py and edit it,
    substituting values as explained in the comments
 1. Run it:
-   a. `gsutil ls gs://mybucket/delete-me* >myfiles.txt`
-   a. `python bulk-delete.py myfiles.txt`
+   1. `gsutil ls gs://mybucket/delete-me* >myfiles.txt`
+   1. `python bulk-delete.py myfiles.txt`
 
 ## Contributing changes
 
