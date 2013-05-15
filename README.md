@@ -1,4 +1,4 @@
-## Project
+## Cloud Storage Bulk Delete
 
 This project is a small sample program written in python that showcases the
 ability to batch operations in the Google Cloud Storage JSON API.  By taking
