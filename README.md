@@ -17,8 +17,10 @@ following:
 1. Install the dependencies from requirements.txt either via `pip` or
    `easy_install`
 1. Copy of `config-example.py` named config.py and edit it, substituting values
-   as directed by the comments
-1. Run it with `python bulk-delete.py`
+   as explained in the comments
+1. Run it:
+   1. `gsutil ls gs://mybucket/delete-me* >myfiles.txt`
+   1. `python bulk-delete.py myfiles.txt`
 
 ## Contributing changes
 
