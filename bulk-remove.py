@@ -54,7 +54,7 @@ def job_handler():
   http = credentials.authorize(http)
 
   # Build a service object for interacting with the API.
-  service = build(serviceName='storage', version='v1beta1', http=http,
+  service = build(serviceName='storage', version='v1beta2', http=http,
                   developerKey=DEVKEY)
   while not q.empty():
     objects = q.get()
@@ -66,11 +66,11 @@ if __name__ == '__main__':
     sys.exit('usage: ./bulk-remove.py <target-list>\n\t'
              'where target-list is a file full of filenames')
 
-  # Populate the queue
+  # Populate the queue.
   with open(sys.argv[1]) as input_file:
-    object_names = [ x.split('/')[-1].strip() for x in input_file.readlines() ]
+    object_names = [x.split('/', 3)[-1].strip() for x in input_file.readlines()]
 
-  # Calculate how many requests go inside each bulk request
+  # Calculate how many requests go inside each bulk request.
   JOB_SIZE = min(MAX_JOB_SIZE, len(object_names)/PROCESS_COUNT) or 1
   for job in segment(JOB_SIZE, object_names):
     q.put(job)
