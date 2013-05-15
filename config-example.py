@@ -2,7 +2,7 @@
 BUCKET = 'ADDME'
 
 # How many processes to fork.
-PROCESS_COUNT = 120
+PROCESS_COUNT = 10
 
 # Maximum number of objects per bulk request.
 MAX_JOB_SIZE = 10000
