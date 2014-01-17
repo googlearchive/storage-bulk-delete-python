@@ -2,10 +2,10 @@
 BUCKET = 'ADDME'
 
 # How many processes to fork.
-PROCESS_COUNT = 10
+PROCESS_COUNT = 4
 
 # Maximum number of objects per bulk request.
-MAX_JOB_SIZE = 10000
+MAX_JOB_SIZE = 100
 
 # Your simple API access key from the APIs tab of
 # <https://code.google.com/apis/console>.
